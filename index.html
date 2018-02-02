@@ -21,10 +21,7 @@
             <a class="navbar-brand" href="#">Andy's tech start</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#/">Spring</a></li>
-            <li><a href="#/computers">JVM</a></li>
-            <li><a href="#/printers">MT</a></li>
-            <li><a href="#/printers">About me</a></li>
+            <li ng-repeat="(key,val) in articles">{{key}}</li>
         </ul>
     </div>
 </nav>
