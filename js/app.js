@@ -4,9 +4,17 @@ andyApp.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider
 
     $stateProvider
         .state("page", {
-            url:"/page/:catagory/:article_name",
+            url:"/page/:category/:article_name",
             templateUrl: function (stateParams){
-                return 'html/' + stateParams.catagory + "/" + stateParams.article_name + '.html';
+                return 'html/' + stateParams.category + "/" + stateParams.article_name + '.html';
             }
         });
 }]);
+
+/* move this logic to homeCtrl.js
+andyApp.run(['$rootScope', '$location', '$state', function ($rootScope, $location, $state) {
+    $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+        console.log("state changed");
+    });
+}])
+*/
